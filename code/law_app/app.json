@@ -1,0 +1,48 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/video/video",
+        "pages/study/study",
+        "pages/logs/logs",
+        "pages/my/my",
+        "pages/search/search",
+        "pages/feedback/feedback",
+        "pages/article/article",
+        "pages/guide/guide",
+        "pages/collection/collection",
+        "pages/favorite/favorite",
+        "pages/modifyinfo/modifyinfo"
+    ],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "知法明理",
+        "navigationBarBackgroundColor": "#e3f0ff",
+        "enablePullDownRefresh": true
+    },
+    "style": "v2",
+    "componentFramework": "glass-easel",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents",
+    "tabBar": {
+        "color": "#cccccc",
+        "selectedColor": "#4080ff",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "white",
+        "position": "bottom",
+        "custom": false,
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "static/images/tabs/home.png",
+                "selectedIconPath": "/static/images/tabs/home-active.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "static/images/tabs/my.png",
+                "selectedIconPath": "/static/images/tabs/my-active.png"
+            }
+        ]
+    }
+}

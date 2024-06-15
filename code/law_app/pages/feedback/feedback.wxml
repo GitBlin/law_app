@@ -1,0 +1,15 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="feedbackContainer">
+    <view class="title">意见反馈：</view>
+    <textarea class="feedbackTextarea" placeholder="请输入您的反馈内容" 
+    value="{{feedbackContent}}" bindinput="handleInputChange"></textarea>
+    <view class="uploadTitle">反馈图片：</view>
+    <button class="uploadButton" bindtap="chooseMedia">选择图片</button>
+    <view class="selectedImageContainer" wx:if="{{selectedImagePath}}">
+        <view class="selectedImageItem">
+            <image class="selectedImage" src="{{selectedImagePath}}" mode="aspectFill" />
+        </view>
+    </view>
+    <view class="submitButton" bindtap="submitFeedback">提交反馈意见</view>
+</view>
+

@@ -1,0 +1,50 @@
+<!--pages/collecion/collection.wxml-->
+<view class="collectionContainer">
+    <!-- 选项卡 -->
+    <view class="tabBar">
+        <view class="tabItem {{current === 0 ? 'active' : ''}}" bindtap="switchTab" data-current="0">文章</view>
+        <view class="tabItem {{current === 1 ? 'active' : ''}}" bindtap="switchTab" data-current="1">视频</view>
+    </view>
+
+    <!-- 内容区域 -->
+    <swiper current="{{current}}" class="swiper" duration="300" bindchange="swiperChange">
+        <swiper-item class="swiper-item">
+            <!-- 文章 -->
+            <view class="articleCard" bindtap="toArticle" data-id="{{item.id}}" wx:for="{{articles}}" wx:key="id">
+                <!-- 文章封面 -->
+                <view class="cardCoverContainer">
+                    <image class="cardCover" src="{{item.image}}" mode="aspectFill" />
+                </view>               
+
+                <!-- 基本信息 -->
+                <view class="cardInfoContainer">
+                    <!-- 文章标题 -->
+                    <view class="cardTitle">{{item.title}}</view>
+                    <view class="elseInfo">
+                        <view class="category">{{item.category}}</view>
+                        <view class="publishTime">{{item.publishTime}}</view>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item class="swiper-item">
+            <!-- 视频 -->
+            <view class="videoCard" bindtap="toVideo" data-id="{{item.id}}" wx:for="{{videos}}" wx:key="id">
+                <!-- 视频封面 -->
+                <view class="cardCoverContainer">
+                    <image class="cardCover" src="{{item.image}}" mode="aspectFill" />
+                </view>               
+
+                <!-- 基本信息 -->
+                <view class="cardInfoContainer">
+                    <!-- 文章标题 -->
+                    <view class="cardTitle">{{item.title}}</view>
+                    <view class="elseInfo">
+                        <view class="category">{{item.category}}</view>
+                        <view class="publishTime">{{item.publishTime}}</view>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

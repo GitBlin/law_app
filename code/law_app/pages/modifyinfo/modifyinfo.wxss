@@ -1,0 +1,119 @@
+/* pages/modifyinfo/modifyinfo.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(#e3f0ff, #f2f6f9);
+    height: 100vh;
+    padding: 0 20rpx;
+}
+
+.avatarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60rpx;
+    margin-top: 100rpx;
+}
+
+.avatarContainer text {
+    margin-top: 20rpx;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}
+
+.inputContainer {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40rpx;
+    margin-top: 60rpx;
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.inputWrapper input {
+    border-bottom: 1rpx solid #4080ff;
+}
+
+label {
+    margin-right: 10rpx;
+    white-space: nowrap;
+}
+
+#nickname {
+    flex: 1;
+    padding: 5px;
+}
+
+.radioContainer {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.radioGroup {
+    display: flex;
+    align-items: center;
+}
+
+.radioLabel {
+    margin-right: 60rpx;
+    /* 增大间距 */
+}
+
+radio .wx-radio-input {
+    height: 28rpx;
+    width: 28rpx;
+    margin-top: -4rpx;
+    border-radius: 50%;
+    border: 2rpx solid #999;
+    background: transparent;
+}
+
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+    border-radius: 50%;
+    width: 32rpx;
+    height: 32rpx;
+    line-height: 28rpx;
+    text-align: center;
+    font-size: 26rpx;
+    color: #fff;
+    background: #4080ff;
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+
+.buttonContainer {
+    background-color: #fff;
+    margin-top: 40rpx;
+    border-radius: 10rpx;
+    height: 80rpx;
+    box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.confirmButton {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: #4080ff;
+    background-color: #fff;
+    border-radius: 10rpx;
+    font-size: 40rpx;
+    text-align: center;
+    line-height: 80rpx;
+    font-weight: normal;
+}

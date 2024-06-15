@@ -1,0 +1,35 @@
+<!--pages/my/my.wxml-->
+<view class="myContainer">
+	<!-- 个人信息栏 -->
+	<view class="myInfo">
+		<image class="avatar" src="{{userInfo.avatar}}"></image>
+		<view class="nickname">{{userInfo.nickname?userInfo.nickname:"微信用户"}}</view>
+		<view wx:if="{{isUserInfoEmpty}}" class="infoBox" bindtap="getUserProfile">登录</view>
+		<view wx:if="{{!isUserInfoEmpty}}" class="infoBox" bindtap="toModifyInfo">修改信息</view>
+	</view>
+
+	<!-- 功能栏 -->
+	<view class="functionCard">
+		<view class="functionItem" bindtap="toFavorite">
+			<view class="iconfont icon-iclike"></view>
+			<text class="functionTitle">点赞列表</text>
+		</view>
+		<view class="functionItem" bindtap="toCollection">
+			<view class="iconfont icon-shoucang1"></view>
+			<text class="functionTitle">收藏列表</text>
+		</view>
+		<view class="functionItem" bindtap="toGuide">
+			<view class="iconfont icon-zhinanzhidao"></view>
+			<text class="functionTitle">用户指南</text>
+		</view>
+		<view class="functionItem" bindtap="toFeedback">
+			<view class="iconfont icon-fankui1"></view>
+			<text class="functionTitle">意见反馈</text>
+		</view>
+	</view>
+
+	<!-- 退出登录按钮 -->
+	<view class="logoutCard">
+		<button class="logoutButton" bindtap="loginOut">退出登录</button>
+	</view>
+</view>

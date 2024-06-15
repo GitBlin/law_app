@@ -1,0 +1,30 @@
+<!--pages/video/video.wxml-->
+<view class="videoContainer">
+    <!-- 视频 -->
+    <view class="videoBox">
+        <video class="video" src='{{video.url}}' autoplay controls object-fit="cover"></video>
+    </view>
+
+    <!-- 收藏栏 -->
+    <view class="interaction">
+        <view class="commentInput">
+            <text>评论</text>
+            <input placeholder="请输入评论" bindinput="inputComment" bindconfirm="submitComment" />
+        </view>
+        <view class="action">
+            <text class="iconfont icon-shoucang1 {{isCollect?'isCollect':''}}" bindtap="handleCollect"></text>
+            <text class="iconfont icon-iclike {{isFavorite?'isFavorite':''}}" bindtap="handleFavorite"></text>
+        </view>
+    </view>
+
+    <!-- 评论 -->
+    <view class="commentContainer">
+        <view class="commentList" >
+            <view class="comment" data-id="{{item.id}}" wx:for="{{comments}}" wx:key="id">
+                <image class="avatar" src="{{item.avatar}}" mode=""/>
+                <view class="nickname">{{item.nickname}}：</view>
+                <text>{{item.content}}</text>
+            </view>
+        </view>
+    </view>
+</view>

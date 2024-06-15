@@ -1,0 +1,65 @@
+<!--pages/search/search.wxml-->
+<view class="searchContainer">
+	<view class="topContainer">
+		<view class="searchBox">
+		<view class="searchForm">
+			<!-- 搜索框 -->
+			<view class="search">
+				<icon class="searchIcon" type="search" size="24"></icon>
+				<input type="text" class="searchInput" placeholder="请输入搜索内容" bindinput="handleInputChange" />
+			</view>
+		</view>
+		<!-- 取消搜索 -->
+		<view class="cancelBtn" bindtap='cancel'>取消</view>
+		</view>
+			<!-- 选项卡 -->
+			<view class="tabBar">
+			<view class="tabItem {{current === 0 ? 'active' : ''}}" bindtap="switchTab" data-current="0">文章</view>
+			<view class="tabItem {{current === 1 ? 'active' : ''}}" bindtap="switchTab" data-current="1">视频</view>
+		</view>
+	</view>
+
+
+    <!-- 内容区域 -->
+    <swiper current="{{current}}" class="swiper" duration="300" bindchange="swiperChange">
+        <swiper-item class="swiper-item">
+            <!-- 文章 -->
+            <view class="articleCard" bindtap="toArticle"  data-id="{{item.id}}" wx:for="{{articles}}" wx:key="id">
+                <!-- 文章封面 -->
+                <view class="cardCoverContainer">
+                    <image wx:if="{{item.image}}" class="cardCover" src="{{item.image}}" mode="aspectFill" />
+                </view>               
+
+                <!-- 基本信息 -->
+                <view class="cardInfoContainer">
+                    <!-- 文章标题 -->
+                    <view class="cardTitle">{{item.title}}</view>
+                    <view class="elseInfo">
+                        <view class="category">{{item.category}}</view>
+                        <view class="publishTime">{{item.publishTime}}</view>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item class="swiper-item">
+            <!-- 视频 -->
+            <view class="videoCard" bindtap="toVideo"  data-id="{{item.id}}" wx:for="{{videos}}" wx:key="id">
+                <!-- 视频封面 -->
+                <view class="cardCoverContainer">
+                    <image wx:if="{{item.image}}" class="cardCover" src="{{item.image}}" mode="aspectFill" />
+                </view>               
+
+                <!-- 基本信息 -->
+                <view class="cardInfoContainer">
+                    <!-- 文章标题 -->
+                    <view class="cardTitle">{{item.title}}</view>
+                    <view class="elseInfo">
+                        <view class="category">{{item.category}}</view>
+                        <view class="publishTime">{{item.publishTime}}</view>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>
+

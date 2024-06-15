@@ -1,0 +1,187 @@
+/* pages/search/search.wxss */
+.searchContainer {
+	background: linear-gradient(#e3f0ff, #f2f6f9);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;    
+}
+
+.topContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+    padding: 20rpx 0;
+	background-color: #e3f0ff;
+	padding-bottom: 0;
+}
+
+.searchBox {
+	padding: 30rpx 20rpx;
+	padding-bottom: 20rpx;
+	display: flex;
+}
+
+.searchForm {
+	flex: auto;
+	border-radius: 20rpx;
+	height: 80rpx;
+	background: #FFFFFF;
+}
+
+.search {
+	position: relative;
+	padding-left: 80rpx;
+	padding-right: 30rpx;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+.searchIcon {
+	position: absolute;
+	left: 20rpx;
+	top: 20rpx;
+}
+
+.searchInput {
+	height: 80rpx;
+	line-height: 80rpx;
+	font-size: 28rpx;
+}
+
+.cancelBtn {
+	margin-left: 30rpx;
+	line-height: 80rpx;
+	color: #4080ff;
+	font-size: 32rpx;
+	white-space: nowrap;
+}
+
+
+
+.tabBar {
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; */
+    display: flex;
+    justify-content: space-between;
+	padding: 20rpx 0;
+	padding-top: 0;
+    background-color: #e3f0ff;
+}
+  
+.tabItem {
+    width: 50%;
+    font-size: 32rpx;
+    color: #000;
+    cursor: pointer;
+    padding: 20rpx;
+    margin: 0 40rpx 0 40rpx;
+    text-align: center;
+}
+
+.active {
+    color: #4080ff;
+    border-bottom: 1rpx solid #4080ff;
+}
+  
+.swiper {
+    /* height: calc(100vh - 100rpx); */
+    margin-top: 240rpx;
+    padding-top: 20rpx;
+    flex: 1;
+    overflow: hidden;
+
+}
+
+.swiper-item {
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* 使 swiper-item 内部可滚动 */
+    height: 100%;
+}
+  
+.content {
+    padding: 20rpx;
+    background-color: #f7f7f7;
+}
+
+.articleCard, .videoCard {
+    /* margin: 0 20px; */
+	display: flex;
+    background-color: #ffffff;
+    border-radius: 10rpx;
+    border-bottom: 2rpx solid #cccccc;
+    align-items: center;
+    height: 200rpx;
+}
+
+.cardCoverContainer {
+    height: 100%;
+    width: 200rpx;
+    display: flex;
+    align-items: center;
+}
+
+.cardCover {
+    height: 120rpx;
+    width: 120rpx;
+	border-radius: 10rpx;
+    margin: auto;
+}
+
+.cardInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+	padding: 20rpx 30rpx;
+	padding-bottom: 30rpx;
+}
+
+.elseInfo {
+    display: flex;
+    align-items: center;
+    margin-left: 20rpx;
+}
+
+.cardTitle {
+	font-size: 28rpx;
+	padding: 20rpx 30rpx;
+	padding-top: 30rpx;
+}
+
+.category, .publishTime, .views {
+    color: #9c9c9c;
+    font-size: 24rpx;
+}
+
+.category {
+	font-size: 24rpx;
+	display: relative;
+    padding: 10rpx 15rpx;
+    border-radius: 10rpx;
+    background-color: #eeeeee;
+	display: inline-block;
+	margin-right: 20rpx;
+}
+
+.publishTime {
+	margin-right: auto;
+}
+
+.highlight {
+	color: #4080ff;
+}
+
+.views {
+	text-align: right; /* 右对齐 */
+    flex-shrink: 0; /* 防止被挤压 */
+}
+  

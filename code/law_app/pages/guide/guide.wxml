@@ -1,0 +1,26 @@
+<!--pages/guide/guide.wxml-->
+<view class="container">
+    <view class="title">用户指南</view>
+    <view class="content">
+        <view class="step">
+            <text class="stepNumber">1.</text>
+            <text class="stepText">打开应用并登录。</text>
+        </view>
+        <view class="step">
+            <text class="stepNumber">2.</text>
+            <text class="stepText">浏览主页上的各类内容。</text>
+        </view>
+        <view class="step">
+            <text class="stepNumber">3.</text>
+            <text class="stepText">点击任何一篇文章阅读详细内容。</text>
+        </view>
+        <view class="step">
+            <text class="stepNumber">4.</text>
+            <text class="stepText">点击任何一个视频进行在线学习。</text>
+        </view>
+        <view class="step">
+            <text class="stepNumber">5.</text>
+            <text class="stepText">在文章页面可以点赞、评论或分享。</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,69 @@
+<!--pages/home/home.wxml-->
+<view class="homeContainer">
+	<!-- 搜索框 -->
+	<view class="searchBox">
+		<view class="search">
+			<view class="searchArr">
+				<icon class="searchIcon" size='24' type='search'></icon>
+				<input class="searchInput" disabled placeholder="搜索" bindtap='toSearch'/>
+			</view>
+		</view>
+	</view>
+
+	<!-- 导航栏区域 -->
+	<swiper class="banners" autoplay>
+        <swiper-item data-id="{{item.id}}" wx:for="{{banners}}" wx:key="id">
+            <image src="{{item.url}}" mode="" />
+        </swiper-item>
+    </swiper>
+
+	<!-- 学习资源分类 图标导航区域×4 -->
+	<view class="title">学习资源分类</view>
+	<view class="navContainer">
+        <view class="navBlock">
+			<view class="navItem" bindtap="toStudy" data-category="1">
+				<text class="iconfont icon-xinwenzixun-xianxing"></text>
+			</view>
+			<text>法治资讯</text>
+        </view>
+		<view class="navBlock">
+			<view class="navItem" bindtap="toStudy" data-category="2">
+				<text class="iconfont icon-send"></text>
+			</view>
+			<text>普法动态</text>
+        </view>
+		<view class="navBlock">
+			<view class="navItem" bindtap="toStudy" data-category="3">
+				<text class="iconfont icon-tianping"></text>
+			</view>
+			<text>依法治理</text>
+        </view>
+		<view class="navBlock">
+			<view class="navItem" bindtap="toStudy" data-category="4">
+				<text class="iconfont icon-qiyewenhua"></text>
+			</view>
+			<text>法治文化</text>
+        </view>
+    </view>
+
+	<!-- 今日推荐 -->
+	<view class="title">今日推荐</view>
+	<view class="recommendContainer">
+		<!-- 推荐卡片 -->
+		<view class="recommendCard" bindtap="toArticle"  data-id="{{item.id}}" wx:for="{{recommendations}}" wx:key="id">
+			<!-- 文章标题 -->
+			<view class="cardTitle">{{item.title}}</view>
+			
+			<!-- 文章封面 -->
+			<image wx:if="{{item.image}}" class="cardCover" src="{{item.image}}" mode="aspectFill" />
+
+			<!-- 基本信息 -->
+			<view class="cardInfoContainer">
+				<view class="category">{{item.category}}</view>
+				<view class="publishTime">{{item.publishTime}}</view>
+				<view class="views"><span class="highlight">{{item.views}}</span>人看过</view>
+			</view>
+		</view>
+	</view>
+
+</view>

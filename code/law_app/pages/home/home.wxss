@@ -1,0 +1,166 @@
+/* pages/home/home.wxss */
+
+.homeContainer {
+	background: linear-gradient(#e3f0ff, #f2f6f9);
+	height: 100vh;
+	padding-top: 20rpx;
+}
+
+.searchBox {
+	display: flex;
+}
+
+.search{
+	width: 100%;
+	margin: 20rpx;
+	margin-bottom: 30rpx;
+	margin-top: 20rpx;
+}
+
+.searchArr {
+	border: 1px solid #4080ff;
+	border-radius: 10rpx;
+	margin: 10rpx auto;
+}
+
+.searchArr input {
+	height: 80rpx;
+	border-radius: 5px;
+}
+
+.searchInput {
+	margin: 0 auto;
+	line-height: 100%;
+	text-align: center;
+	background-color: #fff;
+}
+
+.searchIcon {
+	margin-top: 20rpx;
+	position: absolute;
+	margin-left:37%;
+	/* z-index: 2; */
+	text-align: center;
+}  
+
+.banners {
+    height: 360rpx;
+	margin: 20rpx;
+	margin-top: 0;
+    border-radius: 20rpx;
+    /* 添加圆角效果 */
+    overflow: hidden;
+    /* 保证圆角效果生效 */
+}
+
+.banners image {
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+	text-align: left;
+	font-size: 36rpx;
+	font-weight: bold;
+	margin-top: 60rpx;
+	margin-left: 20rpx;
+}
+
+.navContainer {
+	display: flex;
+	margin-top: 40rpx;
+}
+
+.navBlock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 25%;
+}
+
+.navItem {
+    position: relative;
+    width: 60%;
+    padding-bottom: 60%; /* 保持正方形 */
+    background-color: #fd8d4e;
+    border-radius: 20rpx;
+    box-shadow: 0rpx 0rpx 20rpx #fd8d4e, -0rpx -0rpx 30rpx #cccccc;
+    margin-bottom: 20rpx;
+}
+
+.navBlock .navItem text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 水平和垂直居中 */
+    color: #ffffff;
+    font-size: 60rpx;
+}
+
+.navBlock text {
+	font-size: 26rpx;
+}
+
+.recommendContainer {
+	padding: 20rpx;
+	padding-top: 40rpx;
+}
+
+.recommendCard {
+	display: flex;
+	flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10rpx;
+    box-shadow: 0rpx 0rpx 20rpx #cccccc;
+    margin-bottom: 40rpx;
+}
+
+.cardTitle {
+	font-size: 32rpx;
+	padding: 20rpx 30rpx;
+	padding-top: 30rpx;
+}
+
+.cardCover {
+	width: 90%;
+	padding: 0 auto;
+    height: 240rpx;
+	border-radius: 10rpx;
+    margin: 0 auto;
+}
+
+.cardInfoContainer {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+	padding: 20rpx 30rpx;
+	padding-bottom: 30rpx;
+}
+
+.category, .publishTime, .views {
+    color: #9c9c9c;
+    font-size: 24rpx;
+}
+
+.category {
+	font-size: 24rpx;
+	display: relative;
+    padding: 10rpx 15rpx;
+    border-radius: 10rpx;
+    background-color: #eeeeee;
+	display: inline-block;
+	margin-right: 20rpx;
+}
+
+.publishTime {
+	margin-right: auto;
+}
+
+.highlight {
+	color: #4080ff;
+}
+
+.views {
+	text-align: right; /* 右对齐 */
+    flex-shrink: 0; /* 防止被挤压 */
+}

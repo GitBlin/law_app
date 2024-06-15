@@ -1,0 +1,60 @@
+<!--pages/study/study.wxml-->
+<view class="studyContainer">
+    <!-- 选项卡 -->
+    <view class="tabBar">
+        <view class="tabItem {{current === 0 ? 'active' : ''}}" bindtap="switchTab" data-current="0">文章</view>
+        <view class="tabItem {{current === 1 ? 'active' : ''}}" bindtap="switchTab" data-current="1">视频</view>
+    </view>
+
+    <!-- 内容区域 -->
+    <swiper current="{{current}}" class="swiper" duration="300" bindchange="swiperChange">
+        <swiper-item class="swiper-item">
+            <!-- 文章 -->
+            <view class="articleCard" bindtap="toArticle" data-id="{{item.id}}" wx:for="{{articles}}" wx:key="id">
+                <!-- 文章标题 -->
+                <view class="cardTitle">{{item.title}}</view>
+                
+                <!-- 文章封面 -->
+                <image wx:if="{{item.image}}" class="cardCover" src="{{item.image}}" mode="aspectFill" />
+
+                <!-- 基本信息 -->
+                <view class="cardInfoContainer">
+                    <view class="category">{{item.category}}</view>
+                    <view class="publishTime">{{item.publishTime}}</view>
+                    <view class="views"><span class="highlight">{{item.views}}</span>人看过</view>
+                </view>
+            </view>
+            <view class="articleCard">
+                <!-- 文章标题
+                <view class="cardTitle">“4个入手”加强“两客一危一货”重点车辆安全管理</view>
+                
+                文章封面 
+                <image wx:if="" class="cardCover" src="../../static/images/banners/1.jpg" mode="aspectFill" />
+
+                基本信息 
+                <view class="cardInfoContainer">
+                    <view class="category">法治资讯</view>
+                    <view class="publishTime">2024-4-30</view>
+                    <view class="views"><span class="highlight">4</span>人看过</view>
+                </view> -->
+            </view>
+        </swiper-item>
+        <swiper-item class="swiper-item">
+            <!-- 视频 -->
+            <view class="videoCard" bindtap="toVideo"  data-id="{{item.id}}" wx:for="{{videos}}" wx:key="id">
+                <!-- 文章标题 -->
+                <view class="cardTitle">{{item.title}}</view>
+                
+                <!-- 文章封面 -->
+                <image wx:if="{{item.image}}" class="cardCover" src="{{item.image}}" mode="aspectFill" />
+
+                <!-- 基本信息 -->
+                <view class="cardInfoContainer">
+                    <view class="category">{{item.category}}</view>
+                    <view class="publishTime">{{item.publishTime}}</view>
+                    <view class="views"><span class="highlight">{{item.views}}</span>人看过</view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

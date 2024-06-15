@@ -1,0 +1,82 @@
+/* pages/my/my.wxss */
+.myContainer {
+	background: linear-gradient(#e3f0ff, #f2f6f9);
+	height: 100%;
+	padding:0 20rpx;
+}
+  
+.myInfo {
+	display: flex;
+	align-items: center;
+	padding-top: 60rpx;
+	margin-bottom: 40rpx;
+	height: 200rpx;
+}
+  
+.avatar {
+	width: 120rpx;
+	height: 120rpx;
+	margin-left: 20rpx;
+	border-radius: 50%;
+}
+
+.nickname {
+	font-size: 32rpx;
+	margin-left: 20rpx;
+	margin-right: auto;
+}
+  
+.infoBox {
+	border: 1rpx solid #ccc;
+	padding: 5rpx 10rpx;
+	border-radius: 8rpx;
+	font-size: 32rpx;
+}
+  
+.functionCard {
+	background-color: #fff;
+	border-radius: 20rpx;
+	padding: 20rpx;
+	box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+	margin-bottom: 20rpx;
+}
+  
+.functionItem {
+	display: flex;
+	height: 80rpx;
+	align-items: center;
+	margin-bottom: 20rpx;
+}
+  
+.functionItem .iconfont {
+	font-size: 50rpx;
+	color: #90cbfa;
+	margin-left: 20rpx;
+	margin-right: 40rpx;
+}
+
+.functionTitle {
+	font-size: 32rpx;
+}
+  
+.logoutCard {
+	background-color: #fff;
+	margin-top: 40rpx;
+	border-radius: 20rpx;
+	height: 100rpx;
+	box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+	width: 100%;
+}
+
+.logoutButton {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	color: #4080ff;
+	background-color: #fff;
+	border-radius: 20rpx;
+	font-size: 40rpx;
+	text-align: center;
+	line-height: 100rpx;
+	font-weight: normal;
+}

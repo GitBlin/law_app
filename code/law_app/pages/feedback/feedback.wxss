@@ -1,0 +1,70 @@
+/* pages/feedback/feedback.wxss */
+
+.feedbackContainer {
+    background: linear-gradient(#e3f0ff, #f2f6f9);
+	height: 100%;
+	padding:0 20rpx;
+}
+
+.title, .uploadTitle {
+    font-size: 32rpx;
+    margin-bottom: 20rpx;
+    padding-top: 20rpx;
+}
+
+.feedbackTextarea {
+    width: 90%;
+    height: 200rpx;
+    padding: 20rpx;
+    border: 1rpx solid #cccccc;
+    border-radius: 20rpx;
+    margin: 0 auto;
+    margin-bottom: 20rpx;
+    background-color: #ffffff;
+}
+
+.uploadButton {
+    width: 200rpx;
+    height: 60rpx;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    background-color: #4080ff;
+    font-size: 32rpx;
+    font-weight: normal;
+    color: #fff;
+    border-radius: 10rpx;
+    margin-bottom: 40rpx;
+}
+
+.selectedImageContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.selectedImageItem {
+    width: 150rpx;
+    height: 150rpx;
+    margin: 10rpx;
+}
+
+.selectedImage {
+    width: 100%;
+    height: 100%;
+}
+
+.emptyItem {
+    border: 1rpx solid #000;
+}
+
+.submitButton {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    background-color: #4080ff;
+    color: #fff;
+    border: none;
+    border-radius: 10rpx;
+    font-size: 32rpx;
+}

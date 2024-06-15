@@ -1,0 +1,106 @@
+.studyContainer {
+    background: linear-gradient(#e3f0ff, #f2f6f9);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* 防止页面整体滚动，确保子元素滚动 */
+}
+  
+.tabBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx 0;
+    background-color: #e3f0ff;
+}
+  
+.tabItem {
+    width: 50%;
+    font-size: 32rpx;
+    color: #000;
+    cursor: pointer;
+    padding: 20rpx;
+    margin: 20px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.active {
+    color: #4080ff;
+    border-bottom: 1rpx solid #4080ff;
+}
+  
+.swiper {
+    flex: 1; /* 使 swiper 占满剩余空间 */
+    overflow: hidden;
+}
+  
+.swiper-item {
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* 使 swiper-item 内部可滚动 */
+    height: 100%;
+}
+
+.content {
+    padding: 20rpx;
+    background-color: #f7f7f7;
+}
+
+.articleCard, .videoCard {
+    margin: 0 20px;
+	display: flex;
+	flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10rpx;
+    box-shadow: 0rpx 0rpx 20rpx #cccccc;
+    margin-bottom: 40rpx;
+}
+
+.cardTitle {
+	font-size: 32rpx;
+	padding: 20rpx 30rpx;
+	padding-top: 30rpx;
+}
+
+.cardCover {
+	width: 90%;
+	padding: 0 auto;
+    height: 240rpx;
+	border-radius: 10rpx;
+    margin: 0 auto;
+}
+
+.cardInfoContainer {
+    display: flex;
+    align-items: center;
+	padding: 20rpx 30rpx;
+	padding-bottom: 30rpx;
+}
+
+.category, .publishTime, .views {
+    color: #9c9c9c;
+    font-size: 24rpx;
+}
+
+.category {
+	font-size: 24rpx;
+	display: relative;
+    padding: 10rpx 15rpx;
+    border-radius: 10rpx;
+    background-color: #eeeeee;
+	display: inline-block;
+	margin-right: 20rpx;
+}
+
+.publishTime {
+	margin-right: auto;
+}
+
+.highlight {
+	color: #4080ff;
+}
+
+.views {
+	text-align: right;
+    flex-shrink: 0;
+}

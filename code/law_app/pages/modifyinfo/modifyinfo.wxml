@@ -1,0 +1,34 @@
+<!--pages/modifyinfo/modifyinfo.wxml-->
+<view class="container">
+    <!-- 头像 -->
+    <view class="avatarContainer" bindtap="chooseImage">
+        <image class="avatar" src="{{avatarUrl}}"></image>
+        <text>点击更换头像</text>
+    </view>
+
+    <!-- 用户昵称 -->
+    <view class="inputContainer">
+        <view class="inputWrapper">
+            <label for="nickname">昵称：</label>
+            <input id="nickname" type="text" placeholder="请输入昵称" value="{{nickname}}" bindinput="onNicknameInput" />
+        </view>
+    </view>
+
+    <!-- 性别选择 -->
+    <view class="radioContainer">
+        <label>性别：</label>
+        <radio-group class="radioGroup" bindchange="onGenderChange">
+            <label class="radioLabel">
+                <radio value="male" checked="{{gender === 'male'}}">男</radio>
+            </label>
+            <label class="radioLabel">
+                <radio value="female" checked="{{gender === 'female'}}">女</radio>
+            </label>
+        </radio-group>
+    </view>
+
+    <!-- 确认按钮 -->
+    <view class="buttonContainer">
+        <button bindtap="onSubmit" class="confirmButton">确认修改</button>
+    </view>
+</view>

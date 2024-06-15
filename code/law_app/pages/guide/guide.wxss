@@ -1,0 +1,44 @@
+/* pages/guide/guide.wxss */
+/* guide.wxss - 用户指南页面的WXSS文件 */
+.container {
+    background: linear-gradient(#e3f0ff, #f2f6f9);
+    height: 100%;
+    padding: 0 20rpx;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-top: 40rpx;
+    color:#4080ff;
+}
+
+.content {
+    background-color: #fff;
+	border-radius: 20rpx;
+	padding: 20rpx;
+	box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20rpx 20rpx;
+}
+
+.step {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20rpx;
+    font-size: 32rpx;
+}
+
+.stepNumber {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.stepText {
+    flex: 1;
+}

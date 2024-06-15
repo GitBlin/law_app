@@ -1,0 +1,38 @@
+<!--pages/article/article.wxml-->
+<view class="articleContainer">
+    <!-- 文章标题 -->
+    <view class="title">{{ article.title }}</view>
+  
+    <!-- 分割线 -->
+    <view class="divider"></view>
+  
+    <!-- 文章内容 -->
+    <rich-text class="content" nodes="{{ article.content }}">
+    </rich-text>
+
+    <!-- 分割线 -->
+    <view class="divider"></view>
+
+    <!-- 收藏栏 -->
+    <view class="interaction">
+        <view class="commentInput">
+            <text>评论</text>
+            <input placeholder="请输入评论" value="{{commentContent}}" bindinput="inputComment"  bindinput="inputComment" bindconfirm="submitComment" />
+        </view>
+        <view class="action">
+            <text class="iconfont icon-shoucang1 {{isCollect?'isCollect':''}}" bindtap="handleCollect"></text>
+            <text class="iconfont icon-iclike {{isFavorite?'isFavorite':''}}" bindtap="handleFavorite"></text>
+        </view>
+    </view>
+
+    <!-- 评论 -->
+    <view class="commentContainer">
+        <view class="commentList" >
+            <view class="comment" data-id="{{item.id}}" wx:for="{{comments}}" wx:key="id">
+                <image class="avatar" src="{{item.avatar}}" mode=""/>
+                <view class="nickname">{{item.nickname}}：</view>
+                <text>{{item.content}}</text>
+            </view>
+        </view>
+    </view>
+</view>
